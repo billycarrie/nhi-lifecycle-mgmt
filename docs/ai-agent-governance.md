@@ -30,12 +30,7 @@ AI agents — including Copilot extensions, LLM-backed services, and autonomous 
 | **Display Name** | ai-agent-customer-support-copilot |
 | **NHI Type** | AI Agent Identity |
 | **NHI Subtype** | Copilot Extension — Customer-Facing |
-| **Application (Client) ID** | 14520851-b3c0-41cd-8c40-fc70b1632e0a |
-| **Object ID** | 83e641c2-4e4c-4adc-b515-7fa58f226c4e |
-| **Tenant ID** | 816170cf-fac8-440b-b561-fa4706a4db1c |
 | **Credential Type** | Client Secret |
-| **Secret Description** | ai-agent-copilot-secret-q2-2026 |
-| **Secret Expiry** | 7/7/2026 |
 | **Rotation Due** | 6/7/2026 (30 days before expiry) |
 | **Technical Owner** | Billy Carrie — IAM Engineer |
 | **Business Owner** | Customer Support Lead |
@@ -112,19 +107,6 @@ Step 6 — Delete the app registration
 Step 7 — Update NHI inventory — mark status as Decommissioned
 Step 8 — Document decommission date, reason, and approver
 ```
-
----
-
-## **AI Agent Risk Considerations**
-
-| Risk | Description | Mitigation |
-|---|---|---|
-| **Data oversharing** | Agent surfaces data beyond what the user should see | Scope permissions to minimum, implement output filtering |
-| **Prompt injection** | Malicious user input manipulates agent behavior | Input validation, system prompt hardening |
-| **Credential exposure** | Client secret leaked via logs or misconfiguration | Short expiry (3 months), Key Vault storage |
-| **Scope creep** | Additional permissions added without review | Permission decision record, quarterly review |
-| **Shadow AI agents** | Teams deploy AI agents without IAM involvement | Discovery scanning, onboarding policy enforcement |
-| **Model drift** | Agent behavior changes as underlying model updates | Quarterly behavior review with business owner |
 
 ---
 
