@@ -1,23 +1,45 @@
-NHI Lifecycle Management
+[nhi-README.md](https://github.com/user-attachments/files/26558475/nhi-README.md)
+# **NHI Lifecycle Management**
 
-Non-Human Identity governance framework built and documented in a live Microsoft Entra ID sandbox — Carrie Cares tenant (SMB simulation).
+> Non-Human Identity governance framework built and documented in a live Microsoft Entra ID sandbox — Carrie Cares tenant.
 
-What This Repo Is
-Most IAM documentation describes how NHI governance should work. This repo documents how it actually works — built hands-on in a live Entra ID P2 tenant simulating a small-to-mid-size retail/ecommerce company undergoing identity program maturation.
-Every configuration, runbook, and governance record here reflects real objects created in a sandbox environment, not theoretical examples.
+---
 
-The SMB Context
-Organization: Carrie Cares (CarrieCares tenant)
-Industry: Retail / Ecommerce
-Size: ~200 employees, Azure-first
-IAM maturity: Building from the ground up
-Challenge: Inconsistent NHI governance — shared accounts, unowned app registrations, secrets with 24-month expiry, no lifecycle process
+## **What This Repo Is**
+
+This repo documents an Entra ID tenant of a small-to-mid-size retail/ecommerce company undergoing identity program maturation.
+
+Every configuration, runbook, and governance record here reflects real objects created in a sandbox environment.
+
+---
+
+## **The SMB Context**
+
+| Field | Detail |
+|---|---|
+| **Organization** | Carrie Cares (CarrieCares tenant) |
+| **Industry** | Retail / Ecommerce |
+| **Size** | ~200 employees, Azure-first |
+| **IAM Maturity** | Building from the ground up |
+| **Challenge** | Shared accounts, unowned app registrations, secrets with 24-month expiry, no lifecycle process |
+
 This mirrors the reality of organizations encountered in M&A security work — acquired companies with identity debt and no established NHI program.
 
-NHI Types Covered
-NHI TypeApp NameCredential PatternUse CaseService Principalretailsync-pro-connectorClient secret — 6mo rotationThird-party inventory sync integrationWorkload Identity Federationcarrieretail-cicd-deployerOIDC — no stored secretGitHub Actions → Azure deployment pipelineAI Agent Identityai-agent-customer-support-copilotClient secret — 3mo rotationCopilot-powered customer support pilot
+---
 
-Repo Structure
+## **NHI Types Covered**
+
+| # | NHI Type | App Name | Credential Pattern | Use Case |
+|---|---|---|---|---|
+| 1 | **Service Principal** | `retailsync-pro-connector` | Client secret — 6mo rotation | Third-party inventory sync integration |
+| 2 | **Workload Identity Federation** | `carrieretail-cicd-deployer` | OIDC — no stored secret | GitHub Actions → Azure deployment pipeline |
+| 3 | **AI Agent Identity** | `ai-agent-customer-support-copilot` | Client secret — 3mo rotation | Copilot-powered customer support pilot |
+
+---
+
+## **Repo Structure**
+
+```
 nhi-lifecycle-mgmt/
 │
 ├── README.md                          # This file — overview and context
@@ -30,26 +52,48 @@ nhi-lifecycle-mgmt/
 │
 └── scripts/
     └── Get-NHIInventory.ps1           # PowerShell — discover and report all NHIs (coming soon)
+```
 
-Core Governance Principles
-1. Every NHI must have an owner
-No app registration exists without a named human owner accountable for its lifecycle. Ownerless apps are the #1 NHI audit finding in SMB environments.
-2. Credential type follows use case
+---
 
-Azure-native workloads → managed identity (no credential)
-CI/CD pipelines → workload identity federation (no stored secret)
-Third-party integrations → client secret with enforced short expiry
-Legacy on-prem → certificate-based auth
+## **Core Governance Principles**
 
-3. Least privilege by default
+**1. Every NHI must have an owner**
+No app registration exists without a named human owner accountable for its lifecycle. Ownerless apps are one of tthe top NHI audit findings in SMB environments.
+
+**2. Credential type follows use case**
+- Azure-native workloads → managed identity (no credential)
+- CI/CD pipelines → workload identity federation (no stored secret)
+- Third-party integrations → client secret with enforced short expiry
+- Legacy on-prem → certificate-based auth
+
+**3. Least privilege by default**
 Every NHI is granted the minimum permission required. Permission decisions are documented with explicit rationale — not just what was granted, but what was considered and denied.
-4. Lifecycle is not optional
+
+**4. Lifecycle is not optional**
 Every NHI has a defined onboarding process, review cadence, rotation schedule, and decommission trigger. If any of these are undefined, the NHI is ungoverned by definition.
-5. AI agents are NHIs
+
+**5. AI agents are NHIs**
 AI agents, Copilot extensions, and LLM-backed services require the same identity governance as any other non-human principal — ownership, scoped access, audit trail, and lifecycle accountability.
 
-Key Governance Concepts Demonstrated
-ConceptWhere DocumentedService principal vs managed identity tradeoffservice-principal-lifecycle.mdDelegated vs Application permission typesservice-principal-lifecycle.mdPasswordless auth via OIDC federationworkload-identity-federation.mdLegacy (secret in GitHub) vs modern (OIDC) patternworkload-identity-federation.mdAI agent as distinct NHI subtypeai-agent-governance.mdPermission decision documentationai-agent-governance.mdNHI inventory as audit evidencenhi-inventory.md
+---
 
-Author
-Billy Carrie — IAM Engineer
+## **Key Governance Concepts Demonstrated**
+
+| Concept | Where Documented |
+|---|---|
+| Service principal vs managed identity tradeoff | `service-principal-lifecycle.md` |
+| Delegated vs Application permission types | `service-principal-lifecycle.md` |
+| Passwordless auth via OIDC federation | `workload-identity-federation.md` |
+| Legacy (secret in GitHub) vs modern (OIDC) pattern | `workload-identity-federation.md` |
+| AI agent as distinct NHI subtype | `ai-agent-governance.md` |
+| Permission decision documentation | `ai-agent-governance.md` |
+| NHI inventory as audit evidence | `nhi-inventory.md` |
+
+---
+
+## **Author**
+
+**Billy Carrie** — IAM Engineer
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/billycarrie/)
