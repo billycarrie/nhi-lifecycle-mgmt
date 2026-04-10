@@ -185,9 +185,9 @@ Step 7 — Document decommission date and reason
 
 ### Reference Screenshots
 
-![retailsync-pro-connector Overview](docs/sp-retailsync-api-permissions.png)
+[retailsync-pro-connector Overview](docs/sp-retailsync-api-permissions.png)
 
-![API Permissions — User.Read.All Admin Consented](docs/sp-retailsync-overview.png)
+[API Permissions — User.Read.All Admin Consented](docs/sp-retailsync-overview.png)
 
 ---
 
