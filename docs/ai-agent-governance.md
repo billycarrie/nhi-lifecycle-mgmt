@@ -126,14 +126,19 @@ Step 8 — Document decommission date, reason, and approver
 
 **ai-agent-customer-support-copilot** was onboarded following this framework:
 
-- ✅ Classified as AI Agent NHI subtype
-- ✅ Technical and business owner documented
-- ✅ Permission decision record completed — 4 permissions denied, 1 approved
-- ✅ Client secret — 3 month expiry (shorter than standard reflecting higher risk)
-- ✅ Quarterly review cadence set
-- ✅ Decommission trigger documented
-- ✅ Recorded in NHI inventory
+- Classified as AI Agent NHI subtype
+- Technical and business owner documented
+- Permission decision record completed — 4 permissions denied, 1 approved
+- Client secret — 3 month expiry (shorter than standard reflecting higher risk)
+- Quarterly review cadence set
+- Decommission trigger documented
+- Recorded in NHI inventory
 
+### Reference Screenshots
+
+![AI Agent Identity Overview](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/ai-agent-overview.png)
+
+---
 ---
 
 *Last updated: April 2026 — Billy Carrie*
