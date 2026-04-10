@@ -181,13 +181,13 @@ Step 7 — Document decommission date and reason
 - Owner assigned (Billy Carrie)
 - Recorded in NHI inventory
 
-### Reference Screenshots
+#### Reference Screenshots
 
-### Reference Screenshots
+![retailsync-pro-connector Overview](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/sp-retailsync-overview.png)
 
-[retailsync-pro-connector Overview](docs/sp-retailsync-api-permissions.png)
+![API Permissions — User.Read.All Admin Consented](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/sp-retailsync-api-permissions.png)
 
-[API Permissions — User.Read.All Admin Consented](docs/sp-retailsync-overview.png)
+---
 
 ---
 
