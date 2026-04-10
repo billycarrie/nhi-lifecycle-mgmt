@@ -183,7 +183,7 @@ Step 7 — Document decommission date and reason
 
 ### Reference Screenshots
 
-![retailsync-pro-connector Overview](docs/sp-retailsync-overview.png)
+![retailsync-pro-connector Overview](github.com/billycarrie/nhi-lifecycle-mgmt/edit/main/docs/service-principal-lifecycle.md)
 
 ![API Permissions — User.Read.All Admin Consented](../screenshots/sp-retailsync-api-permissions.png)
 
