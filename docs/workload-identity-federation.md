@@ -184,6 +184,15 @@ jobs:
 - Owner assigned (Billy Carrie)
 - Recorded in NHI inventory
 
+### Reference Screenshots
+
+![carrieretail-cicd-deployer Overview](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/wif-cicd-deployer-overview.png)
+
+![Federated Credentials — GitHub Main Branch](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/wif-cicd-federated-credentials.png)
+
+![CI/CD Deployer API Permissions](https://raw.githubusercontent.com/billycarrie/nhi-lifecycle-mgmt/main/docs/wif-cicd-deployer-api-permissions.png)
+
+---
 ---
 
 *Last updated: April 2026 — Billy Carrie*
