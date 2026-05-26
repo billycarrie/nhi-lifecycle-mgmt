@@ -51,7 +51,7 @@ nhi-lifecycle-mgmt/
 │   └── ai-agent-governance.md         # Governance record — AI agent NHI subtype
 │
 └── scripts/
-    └── Get-NHIInventory.ps1           # PowerShell — discover and report all NHIs (coming soon)
+    └── Get-NHIInventory.ps1 (coming soon)           # PowerShell — discover and report all NHIs 
 ```
 
 ---
